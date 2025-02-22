@@ -1,4 +1,6 @@
-# VICTRS Digital WebStore
+# VICTRS DIGITAL ecommerce store
+
+![3D Render Preview](/frontend/src/assets/3DMRenderPreview.gif)
 
 TODO list 
 - [ ] Basic Store Layout (Homepage / Product Page / Checkout / 3DModelView)
@@ -10,4 +12,4 @@ TODO list
 - [ ] Render 3D ModelView, loads model of specified product
 - [ ] Connect Payment API (Stripe)
 
-![Tech Stack](/src/assets/TechStack.png)
+![Tech Stack](/frontend/src/assets/TechStack.png)

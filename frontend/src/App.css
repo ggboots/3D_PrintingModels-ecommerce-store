@@ -1,0 +1,298 @@
+@import "tailwindcss";
+
+#root {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    color:#1d1f21;
+  }
+  h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+  }
+
+
+
+  .title-container {
+    display: flex;
+    height: 8.5vh;
+    margin: 0;
+    background-color: #1d1f21;
+    /* padding-bottom: 0.2em; */
+  }
+
+  /*  */
+/* Title Container */
+/*  */
+
+  .title {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+    background-color: #1d1f21;
+  }
+  
+  .title-text{
+    font-size: 1.875rem; /* 30px */
+    line-height: 2.25rem;
+    font-weight: 700;
+    color:#f9f9f9;
+  }
+  
+  .title-icon-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 22px;
+  }
+  
+  .store-logo{
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    padding-left: 22px;
+    padding-right:12px;
+    max-width: 142px;
+    height:95%;
+  }
+  
+  .title-icon{
+    height:50%;
+  }
+  
+  /*  */
+/* Main Container */
+/*  */
+
+.main-container {
+    /* background-color: #d3d3d3; */
+    background: linear-gradient(90deg, rgba(213,213,213,1) 0%, rgba(200,200,200,1) 35%, rgba(251,251,251,1) 100%);
+  
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 84vh;
+    margin: 0;
+    /* padding: 0.2em; */
+    align-self: center;
+    align-items: center;
+    /* justify-content: start; */
+  }
+  
+  .main-container-divider{
+    display: flex;
+    flex-direction: row;
+    height:100%;
+    width:100%;
+  }
+  
+  .content-container{
+    /* background-color: red; */
+  
+    height:100%;
+    width:120%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .content-image-container{
+    width:75%;
+    padding-bottom: 12px;
+  }
+  
+  .content-image{
+    border-radius: 32px;
+  }
+  
+  .content-image2{
+    display:none;
+  }
+  
+  
+  .description-container{
+    /* background-color: blue; */
+    height:100%;
+    width:80%;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    
+  }
+  
+  .description-title{
+    font-size: 1.875rem; /* 30px */
+    line-height: 2.25rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
+  
+  .description-text{
+    margin-right: 1.5rem;
+    width: 83.333333%;
+  }
+  
+  /*  */
+  /*  */
+  
+  .card {
+    background-color: rgba(255, 255, 255, 0.87);
+    padding: 1.4em;
+    color: #1d1f21;
+  }
+  
+  .card-model {
+    padding: 3em;
+  }
+  
+  /*  */
+  
+  .transition-button {
+    height: 12.5%;
+  }
+  
+  .model-title{
+    font-family: "Syne", sans-serif;
+  
+    color: #d5cdd5;
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -25%);
+  
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 2.85rem;
+    font-style: bold;
+    top: 75%;
+  
+  }
+  
+  .checkout-button-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem; 
+    width: 75%;
+  }
+  
+
+/* MOBILE-VIEW */
+@media (max-width: 964px) {
+
+    .title-container {
+      display: flex;
+      height: 9vh;
+      margin: 0;
+      background-color: #1d1f21;
+      justify-content: space-between;
+      /* padding-bottom: 0.2em; */
+    }
+  
+    .store-logo{
+      display: flex;
+      align-self: center;
+      justify-self: center;
+      padding-left: 12px;
+      padding-right:0px;
+      max-width: 142px;
+      height:95%;
+    }
+  
+    .title {
+  
+      padding: 0px;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .main-container-divider{
+      flex-direction: column;
+    }
+  
+    .main-container{
+      height:100vh;
+    }
+  
+    .content-container{
+      height:130%;
+      width:100%;
+    }
+    
+    .description-container{
+      height:70%;
+      width:100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+    }
+  
+    .card{
+      display:none;
+    }
+    
+  }
+  
+  @media (max-width: 724px) {
+    .main-container {
+      background: linear-gradient(90deg, rgba(213,213,213,1) 0%, rgba(200,200,200,1) 35%, rgba(251,251,251,1) 100%);
+      width: 100vw;
+      height: 110vh;
+    }
+  
+    .title {
+      display:none;
+    }
+  
+    .content-image-container{
+      width:90%;
+      padding-bottom: 12px;
+    }
+  
+    .content-image{
+      display:none;
+    }
+    .content-image2{
+      border-radius: 16px;
+      display: flex;
+    }
+    
+    .description-title{
+      margin-left: 25px;
+      margin-right: 25px;
+      font-size: 1.5rem; /* 30px */
+      line-height: 2.25rem;
+    }
+    .description-text{
+      font-size:14px;
+      margin-right: 1rem;
+      margin-left:1rem;
+      padding-bottom: 16px;
+    }
+  
+    .store-logo{
+      margin-top: 1vh;
+      padding-left: 16px;
+      max-width: 100px;
+      height:80%;
+    }
+    .content-image-container{
+      padding-top: 12px;
+    }
+    
+    .checkout-button-container{
+      padding-bottom:32px;
+  
+    }
+    
+  }
+
+  
