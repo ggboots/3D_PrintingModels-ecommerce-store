@@ -1,11 +1,15 @@
 const express = require('express');
 const stripe = require('stripe');
 
-const app = express();
+require("dotenv").config();
 const stripeKey = stripe(process.env.STRIPE_KEY)
 
-app.post('/create-checkout-session', async (req, res) => {
-  const session = await stripe.checkout.sessions.create({
+const router = express.Router()
+// const app = express();
+
+
+router.post('/create-checkout-session', async (req, res) => {
+  const session = await stripeKey.checkout.sessions.create({
     line_items: [
       {
         price_data: {
@@ -19,11 +23,11 @@ app.post('/create-checkout-session', async (req, res) => {
       },
     ],
     mode: 'payment',
-    success_url: 'http://localhost:4242/success',
-    cancel_url: 'http://localhost:4242/cancel',
+    success_url: `${process.env.CLIENT_URL}/checkout-success`,
+    cancel_url: `${process.env.CLIENT_URL}/cart`,
   });
 
-  res.redirect(303, session.url);
+  res.send({url: session.url});
 });
 
-app.listen(4242, () => console.log(`Listening on port ${4242}!`));
+module.exports = router;
