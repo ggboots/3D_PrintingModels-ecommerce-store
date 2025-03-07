@@ -1,4 +1,4 @@
-# VICTRS DIGITAL ecommerce store
+# 3D Printable Models ecommerce store
 
 ![3D Render Preview](/frontend/src/assets/3DMRenderPreview.gif)
 
